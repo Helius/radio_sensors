@@ -1,0 +1,8 @@
+[submodule "nrf24L01_plus"]
+	path = nrf24L01_plus
+	url = git@github.com:Helius/nrf24L01_plus.git
+	branch = master
+[submodule "dht22_nrf24l01_sensor"]
+	path = dht22_nrf24l01_sensor
+	url = git@github.com:Helius/dht22_nrf24l01_sensor.git
+	branch = master
