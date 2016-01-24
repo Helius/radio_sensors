@@ -15,7 +15,7 @@ def dht22_handler(Uid, value):
         Temperature = (value[2]&0x7F)*255 + value[3]
     else:
         Temperature = (value[2]*255 + value[3])*0.1
-    print datetime.datetime.now(), "dht22["+ str(Uid) + "] : ", Temperature, "C, ", Humidity, "%"
+    print datetime.datetime.now(), "dht22["+ str(Uid) + "] : ", Temperature, "C ", Humidity, "%", " bat:", str(value[4]/10.0)+"V", "retry cnt:", str(value[5])
     # save to DB
 #       call(["rrdtool", "update", "/home/eugene/db/climat.rrd", "N:" + str(Temperature) + ":U:" + str(Humidity) + ":U" ])
     #echo_file('climat_log/tempr', Temperature)
